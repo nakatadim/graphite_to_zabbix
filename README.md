@@ -1,6 +1,7 @@
 Simple py script to get data from graphite and collect it in zabbix item
 Example of command line check:
  check_graphite_data_artirix -u "http://graphite.artirix.com/render?target=apache.response.200&from=-12hours" -U nasko -P xxx
+ Where:
 -U - user for basic auth
 -P - password for basic auth
 Example of zabbix item:
