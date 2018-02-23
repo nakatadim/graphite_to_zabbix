@@ -30,6 +30,8 @@ def pull_graphite_data(url, user=None, password=None):
         myopener = urllib2.build_opener(handler)
         opened = urllib2.install_opener(myopener)
     data = urllib2.urlopen(url).read()
+    # be session friendly
+    data.close()
     return data
 
 def eval_graphite_data(data, reduction_ratio):
